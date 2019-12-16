@@ -34,13 +34,14 @@ We've provided you with a console that you can use to test your code. To enter a
   - Once a startup is created, the founder cannot be changed.
 - `Startup#domain`
   - returns a **string** that is the startup's domain
-- `Startup#pivot`
+- `Startup#pivot` ####pivot(new_domain,new_name)
   - given a string of a **domain** and a string of a **name**, change the domain
     and name of the startup. This is the only public method through which the
     domain should be changed.
 - `Startup.all`
   - should return **all** of the startup instances
 - `Startup.find_by_founder`
+    #### Startup.find_by_founder("Janaina")
   - given a string of a **founder's name**, returns the **first startup** whose founder's name matches
 - `Startup.domains`
   - should return an **array** of all of the different startup domains
@@ -49,23 +50,23 @@ We've provided you with a console that you can use to test your code. To enter a
 
 #### Build out the following methods on the `VentureCapitalist` class
 
-- `VentureCapitalist#name`
+- `VentureCapitalist#name` #### done
   - returns a **string** that is the venture capitalist's name
-- `VentureCapitalist#total_worth`
+- `VentureCapitalist#total_worth` #### done
   - returns a **number** that is the total worth of this investor (e.g., think of it as how much money they have)
-- `VentureCapitalist.all`
+- `VentureCapitalist.all` #### done
   - returns an array of all venture capitalists
-- `VentureCapitalist.tres_commas_club`
+- `VentureCapitalist.tres_commas_club`  #### done
   - returns an array of all venture capitalists in the Trés Commas club (they have more then 1,000,000,000 `total_worth`)
 
 ---
 
 #### Build out the following methods on the `FundingRound` class
 
-- `FundingRound#startup`
+- `FundingRound#startup` ###done
   - returns the startup object for that given funding round
   - Once a funding round is created, I should not be able to change the startup
-- `FundingRound#venture_capitalist`
+- `FundingRound#venture_capitalist` #### done
   - returns the venture capitalist object for that given funding round
   - Once a funding round is created, I should not be able to change the venture capitalist
 - `FundingRound#type`
@@ -83,13 +84,13 @@ We've provided you with a console that you can use to test your code. To enter a
 
 #### Startup
 
-- `Startup#sign_contract`
+- `Startup#sign_contract` ####done
   - given a **venture capitalist object**, type of investment (as a string), and the amount invested (as a float), creates a new funding round and associates it with that startup and venture capitalist.
-- `Startup#num_funding_rounds`
+- `Startup#num_funding_rounds` 
   - Returns the total number of funding rounds that the startup has gotten
 - `Startup#total_funds`
   - Returns the total sum of investments that the startup has gotten
-- `Startup#investors`
+- `Startup#investors` 
   - Returns a **unique** array of all the venture capitalists that have invested in this company
 - `Startup#big_investors`
   - Returns a **unique** array of all the venture capitalists that have invested in this company and are in the Trés Commas club
